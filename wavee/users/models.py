@@ -21,3 +21,17 @@ class User(AbstractUser):
     followers = models.ManyToManyField("self", blank=True)
     following = models.ManyToManyField("self", blank=True)
 
+def __str__(self):
+    return self.username
+
+@property
+def c(self):
+    return self.images.all().count()
+
+@property
+def c(self):
+    return self.followers.all().count()
+
+@property
+def c(self):
+    return self.following.all().count()
